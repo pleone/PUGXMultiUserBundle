@@ -50,6 +50,11 @@ class RegistrationManager
         $this->formFactory = $formFactory;
     }
     
+    public function setController($controller){
+      $this->controller = $controller;
+    }
+            
+    
     /**
      * 
      * @param string $class
