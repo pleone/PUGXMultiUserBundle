@@ -66,7 +66,7 @@ class RegistrationManager
         
         $this->controller->setContainer($this->container);
         $result = $this->controller->registerAction($this->container->get('request'));        
-        if ($result instanceof RedirectResponse) {
+        if ($result instanceof RedirectResponse || $result instanceof  \Symfony\Component\HttpFoundation\JsonResponse) {
             return $result;
         }
         
